@@ -1,0 +1,71 @@
+
+# Using the Package in R {#packageinR}
+
+## Installation
+
+If you do not have R installed on your computer, please go to [Appendix 1](#appendix1). Once you have R installed, you can install the **framinghamPredictor** package as per the instructions below:
+
+### Windows 7 or Later {-}
+1. Download and Install the latest version of R from [https://cran.r-project.org/bin/windows/base/](https://cran.r-project.org/bin/windows/base/)
+2. Download and Install R Studio from [https://www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/)
+
+3. Using either an R session in Terminal or in R Studio, install the package `devtools`:
+
+```{r, eval=FALSE, echo=TRUE}
+install.packages('devtools')
+```
+
+4. Install `framinghamPredictor` from GitHub:
+
+```{r, eval=FALSE, echo=TRUE}
+devtools::install_github('resplab/framinghamPredictor')
+```
+
+### Mac OS Sierra and Later {-}
+1. Download and Install the latest version of R from [https://cran.r-project.org/bin/macosx/](https://cran.r-project.org/bin/macosx/)
+2. Download and Install R Studio from [https://www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/)
+
+3. Using either an R session in Terminal or in R Studio, install the package `devtools`:
+
+```{r, eval=FALSE, echo=TRUE}
+install.packages('devtools')
+```
+
+4. Install epicR from GitHub:
+
+```{r, eval=FALSE, echo=TRUE}
+devtools::install_github('resplab/epicR')
+```
+
+
+### Ubuntu 16.04 and Later {-}
+
+1. Install R if you don't have it installed already. See [Appendix 1](#appendix1) for installation guide.
+
+2. Download and Install R Studio from [https://www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/)
+
+3. Using either an R session in Terminal or in R Studio, install the package `devtools`:
+
+```{r, eval=FALSE, echo=TRUE}
+install.packages ('devtools')
+```
+
+4. Install `framinghamPredictor` from GitHub:
+
+```{r, eval=FALSE, echo=TRUE}
+devtools::install_github('resplab/framinghamPredictor')
+```
+
+```{r chunk-label, eval = FALSE, echo = TRUE}
+install.packages("devtools")
+devtools::install_github("resplab/framinghamPredictor")
+```
+
+## Running the Model
+
+Now that you have installed `framinghamPredictor`, you can load the library:
+
+```{r, eval = FALSE, echo = TRUE}
+library(framinghamPredictor)
+```
+

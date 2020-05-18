@@ -1,0 +1,20 @@
+
+# Using the Package as an API (PRISM)
+
+PRISM (Programmable Interface for Simulation/Statistical Models) is a package which provides a user-friendly API interface in R for clinical prediction and decision analytics models hosted on UBC PRISM cloud.
+
+For more information, the PRISM package can be found on GitHub at [PRISM on  GitHub](https://github.com/resplab/prism).
+
+## PRISM API in Excel {#api-in-excel}
+
+One of the primary goals of PRISM is making prediction models accessible to a wide range of audiences, including those with less programming experience. The Excel API is targetted towards users who are less familiar with programming, or users who are familiar with programming and would like an easy way to extract the data quickly.
+
+To use the model, you will need to have Excel installed on your computer. Currently, the Excel API only works in Windows (PC), although we are working on developing a version for Mac (OS X) as well.
+
+### Downloading the Spreadsheet {-}
+
+To get started, you will need to go to:
+
+[PRISM Model Repository](http://resp.core.ubc.ca/ipress/prism).
+
+In the row that has the **Framingham** model, go to the column labelled **Excel Interface** and click on the link **Framingham Excel (PC)**. This will download the Excel Interface for the **Framingham** model.
