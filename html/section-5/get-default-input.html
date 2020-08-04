@@ -1,0 +1,45 @@
+<head><link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/github.min.css">
+      </head>
+<code-chunk>
+  <div slot="code">
+    <div class="code-chunk">
+    <code class="code mac bash">
+      curl -X POST -H "Content-Type: application/json" -d '{"api_key":["YOUR_API_KEY"],"func":["get_default_input"]}'
+      http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json </code>
+      <code class="code linux bash">
+        curl -X POST -H "Content-Type: application/json" -d '{"api_key":["YOUR_API_KEY"],"func":["get_default_input"]}'
+        http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json
+      </code>
+        <code class="code windows bash">
+
+        </code>
+    <code class="code js javascript">
+      let arguments = JSON.stringify({
+        api_key: 'YOUR_API_KEY',
+        func: ["get_default_input"]
+      });
+      request = new XMLHttpRequest();
+      request.open('POST', 'http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json');
+      request.setRequestHeader('Content-Type', 'application/json');
+      request.send(arguments);
+      let results = request.response;
+    </code>
+    <code class="code r active">
+      library(prism)
+      connect_to_model('framinghamPrism', api_key = YOUR_API_KEY)
+      input = get_default_input()
+    </code>
+    <code class="code python">
+      import json
+      import requests
+      api_key = 'YOUR_API_KEY'
+      response = requests.post("http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json",
+        json = {"api_key":[api_key],
+        "func": ["get_default_input"]})
+      print(response)
+      results = json.loads(response.text) 
+      print(results)
+    </code>
+</div></div></code-chunk>
+<br>

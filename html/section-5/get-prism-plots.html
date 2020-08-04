@@ -1,0 +1,33 @@
+<head><link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/github.min.css">
+      </head>
+<code-chunk>
+  <div slot="code">
+    <div class="code-chunk">
+    <code class="code mac bash">
+      curl -o ~/your_plot_name.png http://localhost:5656/ocpu/tmp/{session_id}/graphics/{plot_number}/png </code>
+      <code class="code linux bash">
+        curl -o ~/your_plot_name.png http://localhost:5656/ocpu/tmp/{session_id}/graphics/{plot_number}/png
+      </code>
+        <code class="code windows bash">
+
+        </code>
+    <code class="code r active">
+      draw_plots(plot_number=NULL)
+    </code>
+</div></div></code-chunk>
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+<link rel="stylesheet"
+            href="highlightjs/styles/default.css">
+<script src="js/highlight.pack.js"></script>
+  <script>
+    /*
+Applies highlighting to all <pre><code>..</code></pre> blocks on a page.
+*/
+hljs.configure({useBR: true});
+$("code-chunk code").each(function (i, e) {
+    hljs.highlightBlock(e);
+});
+/*hljs.initHighlightingOnLoad();*/
+  </script>

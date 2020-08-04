@@ -31,6 +31,7 @@
   
 <link rel="prev" href="section-webapp.html"/>
 <link rel="next" href="section-appendix1.html"/>
+<script src="book_assets/header-attrs-2.1/header-attrs.js"></script>
 <script src="book_assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,25 +51,26 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -77,9 +79,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -131,8 +133,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="section-introduction.html"><a href="section-introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="section-thestudy.html"><a href="section-thestudy.html"><i class="fa fa-check"></i><b>2</b> The Study</a></li>
-<li class="chapter" data-level="3" data-path="section-packageinR.html"><a href="section-packageinR.html"><i class="fa fa-check"></i><b>3</b> Using the Package in R</a><ul>
-<li class="chapter" data-level="3.1" data-path="section-packageinR.html"><a href="section-packageinR.html#section-installation"><i class="fa fa-check"></i><b>3.1</b> Installation</a><ul>
+<li class="chapter" data-level="3" data-path="section-packageinR.html"><a href="section-packageinR.html"><i class="fa fa-check"></i><b>3</b> Using the Package in R (Developers Only)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="section-packageinR.html"><a href="section-packageinR.html#section-installation"><i class="fa fa-check"></i><b>3.1</b> Installation</a>
+<ul>
 <li class="chapter" data-level="" data-path="section-packageinR.html"><a href="section-packageinR.html#section-windows-7-or-later"><i class="fa fa-check"></i>Windows 7 or Later</a></li>
 <li class="chapter" data-level="" data-path="section-packageinR.html"><a href="section-packageinR.html#section-mac-os-sierra-and-later"><i class="fa fa-check"></i>Mac OS Sierra and Later</a></li>
 <li class="chapter" data-level="" data-path="section-packageinR.html"><a href="section-packageinR.html#section-ubuntu-16.04-and-later"><i class="fa fa-check"></i>Ubuntu 16.04 and Later</a></li>
@@ -140,12 +144,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2" data-path="section-packageinR.html"><a href="section-packageinR.html#section-running-the-model"><i class="fa fa-check"></i><b>3.2</b> Running the Model</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="section-webapp.html"><a href="section-webapp.html"><i class="fa fa-check"></i><b>4</b> Using the Web Application</a></li>
-<li class="chapter" data-level="5" data-path="section-using-the-package-as-an-api-prism.html"><a href="section-using-the-package-as-an-api-prism.html"><i class="fa fa-check"></i><b>5</b> Using the Package as an API (PRISM)</a><ul>
-<li class="chapter" data-level="5.1" data-path="section-using-the-package-as-an-api-prism.html"><a href="section-using-the-package-as-an-api-prism.html#section-api-in-excel"><i class="fa fa-check"></i><b>5.1</b> PRISM API in Excel</a><ul>
-<li class="chapter" data-level="" data-path="section-using-the-package-as-an-api-prism.html"><a href="section-using-the-package-as-an-api-prism.html#section-downloading-the-spreadsheet"><i class="fa fa-check"></i>Downloading the Spreadsheet</a></li>
+<li class="chapter" data-level="5" data-path="section-using-the-package-as-an-api-prism.html"><a href="section-using-the-package-as-an-api-prism.html"><i class="fa fa-check"></i><b>5</b> Using the Package as an API (PRISM)</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="section-using-the-package-as-an-api-prism.html"><a href="section-using-the-package-as-an-api-prism.html#section-api-in-r"><i class="fa fa-check"></i><b>5.1</b> API in R/Javascript/Python/Bash</a>
+<ul>
+<li class="chapter" data-level="" data-path="section-using-the-package-as-an-api-prism.html"><a href="section-using-the-package-as-an-api-prism.html#section-setting-the-input"><i class="fa fa-check"></i>Setting the Input</a></li>
+<li class="chapter" data-level="" data-path="section-using-the-package-as-an-api-prism.html"><a href="section-using-the-package-as-an-api-prism.html#section-running-the-model-1"><i class="fa fa-check"></i>Running the Model</a></li>
+<li class="chapter" data-level="5.1.1" data-path="section-using-the-package-as-an-api-prism.html"><a href="section-using-the-package-as-an-api-prism.html#section-plots"><i class="fa fa-check"></i><b>5.1.1</b> Plots</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="section-appendix1.html"><a href="section-appendix1.html"><i class="fa fa-check"></i><b>6</b> Appendix 1: Installing R</a><ul>
+<li class="chapter" data-level="6" data-path="section-appendix1.html"><a href="section-appendix1.html"><i class="fa fa-check"></i><b>6</b> Appendix 1: Installing R</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="section-appendix1.html"><a href="section-appendix1.html#section-step-1-mirrors"><i class="fa fa-check"></i><b>6.1</b> Step 1: Mirrors</a></li>
 <li class="chapter" data-level="6.2" data-path="section-appendix1.html"><a href="section-appendix1.html#section-mac-os-x"><i class="fa fa-check"></i><b>6.2</b> Mac OS X</a></li>
 <li class="chapter" data-level="6.3" data-path="section-appendix1.html"><a href="section-appendix1.html#section-windows"><i class="fa fa-check"></i><b>6.3</b> Windows</a></li>
@@ -168,19 +177,377 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="section-using-the-package-as-an-api-prism" class="section level1">
+<div id="section-using-the-package-as-an-api-prism" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Using the Package as an API (PRISM)</h1>
 <p>PRISM (Programmable Interface for Simulation/Statistical Models) is a package which provides a user-friendly API interface in R for clinical prediction and decision analytics models hosted on UBC PRISM cloud.</p>
 <p>For more information, the PRISM package can be found on GitHub at <a href="https://github.com/resplab/prism">PRISM on GitHub</a>.</p>
-<div id="section-api-in-excel" class="section level2">
-<h2><span class="header-section-number">5.1</span> PRISM API in Excel</h2>
-<p>One of the primary goals of PRISM is making prediction models accessible to a wide range of audiences, including those with less programming experience. The Excel API is targetted towards users who are less familiar with programming, or users who are familiar with programming and would like an easy way to extract the data quickly.</p>
-<p>To use the model, you will need to have Excel installed on your computer. Currently, the Excel API only works in Windows (PC), although we are working on developing a version for Mac (OS X) as well.</p>
-<div id="section-downloading-the-spreadsheet" class="section level3 unnumbered">
-<h3>Downloading the Spreadsheet</h3>
-<p>To get started, you will need to go to:</p>
-<p><a href="http://resp.core.ubc.ca/ipress/prism">PRISM Model Repository</a>.</p>
-<p>In the row that has the <strong>Framingham</strong> model, go to the column labelled <strong>Excel Interface</strong> and click on the link <strong>Framingham Excel (PC)</strong>. This will download the Excel Interface for the <strong>Framingham</strong> model.</p>
+<div id="section-api-in-r" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> API in R/Javascript/Python/Bash</h2>
+<p>To get started, you will need to install a few packages:</p>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="js/code-chunk-component.js"></script>
+</head>
+
+<code-chunk>
+  <div slot="code">
+    <div class="code-chunk">
+      <code class="code mac">
+      brew install curl </code>
+      <code class="code linux">
+      sudo apt install curl</code>
+        <code class="code windows">
+<br>
+        </code>
+    <code class="code js">
+    </code>
+    <code class="code r active">
+      install.packages("devtools") <br><br>
+      devtools::install_github("resplab/peermodels")<br>
+    </code>
+    <code class="code python">
+      pip3 install requests<br>
+    </code></div>
+  </div>
+</code-chunk>
+<br>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/list-group.js"></script>
+<script src="js/code-chunk.js"></script>
+<br>
+<p>The next step is to get an API key. For now, we will be giving out API keys on a case-by-case basis, so please email either:</p>
+<p>Amin Adibi: <a href="mailto:amin.adibi@ubc.ca" class="email">amin.adibi@ubc.ca</a></p>
+<p>Mohsen Sadatsafavi: <a href="mailto:mohsen.sadatsafavi@ubc.ca" class="email">mohsen.sadatsafavi@ubc.ca</a></p>
+<div id="section-setting-the-input" class="section level3 unnumbered" number="">
+<h3>Setting the Input</h3>
+<p>To run the model, you can either use the default input, or set your own input. To see what the default input is, you can use the following <code>POST</code> call:</p>
+<head><link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/github.min.css">
+      </head>
+<code-chunk>
+  <div slot="code">
+    <div class="code-chunk">
+    <code class="code mac bash">
+      curl -X POST -H "Content-Type: application/json" -d '{"api_key":["YOUR_API_KEY"],"func":["get_default_input"]}'<br>
+      http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json </code>
+      <code class="code linux bash">
+        curl -X POST -H "Content-Type: application/json" -d '{"api_key":["YOUR_API_KEY"],"func":["get_default_input"]}'<br>
+        http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json<br>
+      </code>
+        <code class="code windows bash">
+<br>
+        </code>
+    <code class="code js javascript">
+      let arguments = JSON.stringify({<br>
+        api_key: 'YOUR_API_KEY',<br>
+        func: ["get_default_input"]<br>
+      });<br>
+      request = new XMLHttpRequest();<br>
+      request.open('POST', 'http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json');<br>
+      request.setRequestHeader('Content-Type', 'application/json');<br>
+      request.send(arguments);<br>
+      let results = request.response;<br>
+    </code>
+    <code class="code r active">
+      library(prism)<br>
+      connect_to_model('framinghamPrism', api_key = YOUR_API_KEY)<br>
+      input = get_default_input()<br>
+    </code>
+    <code class="code python">
+      import json<br>
+      import requests<br>
+      api_key = 'YOUR_API_KEY'<br>
+      response = requests.post("http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json",<br>
+        json = {"api_key":[api_key],<br>
+        "func": ["get_default_input"]})<br>
+      print(response)<br>
+      results = json.loads(response.text) <br>
+      print(results)<br>
+    </code>
+</div></div></code-chunk>
+<br>
+</div>
+<div id="section-running-the-model-1" class="section level3 unnumbered" number="">
+<h3>Running the Model</h3>
+<p>To run the model with the default input, you can use the following <code>POST</code> call:</p>
+<code-chunk>
+  <div slot="code">
+    <div class="code-chunk">
+      <code class="code mac bash">
+        curl -X POST -H "Content-Type: application/json" -d '{"api_key":["YOUR_API_KEY"],"func":["prism_model_run"],<br>
+"model_input":[{}]}' http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json </code>
+        <code class="code linux bash">
+          curl -X POST -H "Content-Type: application/json" -d '{"api_key":["YOUR_API_KEY"],"func":["prism_model_run"],<br>
+"model_input":[{}]}' http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json<br>
+        </code>
+          <code class="code windows bash">
+            curl -Body '{"api_key":["YOUR_API_KEY"],"func":["prism_model_run"],"model_input":[{}]}' -Method POST -uri http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json -Headers @{"Content-type"="application/json"}<br>
+          </code>
+            <code class="code js javascript">
+              let patient = JSON.stringify({<br>
+                api_key: 'YOUR_API_KEY',<br>
+                func: ["prism_model_run"],<br>
+                model_input: [{}]<br>
+              });<br>
+              request.open('POST', 'http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json');<br>
+              request.setRequestHeader('Content-Type', 'application/json');<br>
+              request.send(patient);<br>
+              let results = request.response;<br>
+              </code>
+                <code class="code r hljs active">
+                  library(prism)<br>
+                connect_to_model('framinghamPrism', api_key = YOUR_API_KEY)<br>
+                results = model_run()<br>
+                </code>
+                  <code class="code python">
+                  api_key = 'YOUR_API_KEY'<br>
+                patientInput = [{<br>
+                }]<br>
+                response = requests.post("http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json",<br>
+                                         json = {"api_key":[api_key],<br>
+                                           "func": ["prism_model_run"],<br>
+                                           "model_input": patientInput})<br>
+                print(response)<br>
+                results = json.loads(response.text)<br>
+                print(results)<br>
+                </code>
+                  </div>
+                  </div>
+                  </code-chunk>
+                  <br>
+<p>Now, the input for the <code>framinghamPredictor</code> package is quite large, so we won’t print all the input options here. You may change as many of the default inputs as you like. I have highlighted below a few of the more common input parameters you might want to adjust:</p>
+<code-chunk>
+  <div slot="code">
+    <div class="code-chunk">
+    <code class="code mac">
+      curl -X POST -H "Content-Type: application/json" -d '{<br>
+        "api_key":["YOUR_API_KEY"],<br>
+        "func":["prism_model_run"],<br>
+        "model_input":[{<br>
+              "predictors":{<br>
+                "fev1_0": 1.0,<br>
+                "fvc_0": 1.0,<br>
+                "age": 75,<br>
+                "triglycerides": null,<br>
+                "hematocrit": null,<br>
+                "albumin": null,<br>
+                "globulin": null,<br>
+                "ALP": null,<br>
+                "WBC": null,<br>
+                "QRS_intv": null,<br>
+                "wine": null,<br>
+                "beer": null,<br>
+                "cocktail": null,<br>
+                "height": 170,<br>
+                "smoke_year": null,<br>
+                "daily_cigs": null,<br>
+                "sex": "male",<br>
+                "broncho": "",<br>
+                "dyspnea_exc": "",<br>
+                "night_sym": ""<br>
+              },<br>
+              "resp_var": "fev1"    }<br>
+              ]}' http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json </code>
+      <code class="code linux">
+      curl -X POST -H "Content-Type: application/json" -d '{<br>
+        "api_key":["YOUR_API_KEY"],<br>
+        "func":["prism_model_run"],<br>
+        "model_input":[<br>
+        {<br>
+              "predictors":{<br>
+                "fev1_0": 1.0,<br>
+                "fvc_0": 1.0,<br>
+                "age": 75,<br>
+                "triglycerides": null,<br>
+                "hematocrit": null,<br>
+                "albumin": null,<br>
+                "globulin": null,<br>
+                "ALP": null,<br>
+                "WBC": null,<br>
+                "QRS_intv": null,<br>
+                "wine": null,<br>
+                "beer": null,<br>
+                "cocktail": null,<br>
+                "height": 170,<br>
+                "smoke_year": null,<br>
+                "daily_cigs": null,<br>
+                "sex": "male",<br>
+                "broncho": "",<br>
+                "dyspnea_exc": "",<br>
+                "night_sym": ""<br>
+              },<br>
+              "resp_var": "fev1"    }<br>
+        ]}' http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json<br>
+      </code>
+        <code class="code windows">
+          curl -Body '{<br>
+            "api_key":["YOUR_API_KEY"],<br>
+            "func":["prism_model_run"],<br>
+            "model_input":[{<br>
+              "predictors":{<br>
+                "fev1_0": 1.0,<br>
+                "fvc_0": 1.0,<br>
+                "age": 75,<br>
+                "triglycerides": null,<br>
+                "hematocrit": null,<br>
+                "albumin": null,<br>
+                "globulin": null,<br>
+                "ALP": null,<br>
+                "WBC": null,<br>
+                "QRS_intv": null,<br>
+                "wine": null,<br>
+                "beer": null,<br>
+                "cocktail": null,<br>
+                "height": 170,<br>
+                "smoke_year": null,<br>
+                "daily_cigs": null,<br>
+                "sex": "male",<br>
+                "broncho": "",<br>
+                "dyspnea_exc": "",<br>
+                "night_sym": ""<br>
+              },<br>
+              "resp_var": "fev1"    }]}' -Method POST -uri http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json -Headers @{"Content-type"="application/json"}<br>
+        </code>
+    <code class="code js">
+      let patient = JSON.stringify({<br>
+  api_key: 'YOUR_API_KEY',<br>
+  func: ["prism_model_run"],<br>
+  model_input: [<br>
+    {<br>
+              "predictors":{<br>
+                "fev1_0": 1.0,<br>
+                "fvc_0": 1.0,<br>
+                "age": 75,<br>
+                "triglycerides": null,<br>
+                "hematocrit": null,<br>
+                "albumin": null,<br>
+                "globulin": null,<br>
+                "ALP": null,<br>
+                "WBC": null,<br>
+                "QRS_intv": null,<br>
+                "wine": null,<br>
+                "beer": null,<br>
+                "cocktail": null,<br>
+                "height": 170,<br>
+                "smoke_year": null,<br>
+                "daily_cigs": null,<br>
+                "sex": "male",<br>
+                "broncho": "",<br>
+                "dyspnea_exc": "",<br>
+                "night_sym": ""<br>
+              },<br>
+              "resp_var": "fev1"<br>
+            }<br>
+  ]<br>
+});<br>
+request.open('POST', 'http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json');<br>
+request.setRequestHeader('Content-Type', 'application/json');<br>
+request.send(patient);<br>
+let results = request.response;<br>
+    </code>
+    <code class="code r active">
+      library(peermodels)<br>
+      connect_to_model('framinghamPrism', api_key = YOUR_API_KEY)<br>
+      input = list(<br>
+      resp_var="fev1",<br>
+      predictors = list(fev1_0 = 1.0,<br>
+      fvc_0 = 1.0,<br>
+      age=75,<br>
+      triglycerides = NA,<br>
+      hematocrit = NA,<br>
+      albumin=NA,<br>
+      globulin=NA,<br>
+      ALP=NA,<br>
+      WBC=NA,<br>
+      QRS_intv=NA,<br>
+      wine=NA,<br>
+      beer=NA,<br>
+      cocktail=NA,<br>
+      height=170,<br>
+      smoke_year=NA,<br>
+      daily_cigs=NA,<br>
+      sex="male",<br>
+      broncho="",<br>
+      dyspnea_exc="",<br>
+      night_sym=""))<br>
+      results = model_run(input)<br>
+    </code>
+    <code class="code python">
+      api_key = 'YOUR_API_KEY'<br>
+      patientInput = [{<br>
+              "predictors":{<br>
+                "fev1_0": 1.0,<br>
+                "fvc_0": 1.0,<br>
+                "age": 75,<br>
+                "triglycerides": null,<br>
+                "hematocrit": null,<br>
+                "albumin": null,<br>
+                "globulin": null,<br>
+                "ALP": null,<br>
+                "WBC": null,<br>
+                "QRS_intv": null,<br>
+                "wine": null,<br>
+                "beer": null,<br>
+                "cocktail": null,<br>
+                "height": 170,<br>
+                "smoke_year": null,<br>
+                "daily_cigs": null,<br>
+                "sex": "male",<br>
+                "broncho": "",<br>
+                "dyspnea_exc": "",<br>
+                "night_sym": ""<br>
+              },<br>
+              "resp_var": "fev1"    }]<br>
+      response = requests.post("http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json",<br>
+      json = {"api_key":[api_key],<br>
+      "func": ["prism_model_run"],<br>
+      "model_input": patientInput})<br>
+print(response)<br>
+results = json.loads(response.text)<br>
+print(results)<br>
+    </code>
+</div>
+</div>
+</code-chunk>
+</div>
+<div id="section-plots" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Plots</h3>
+<p>When you call <code>model_run</code>, some plots are created from the data. To view these plots, you will need to use the <code>draw_plots</code> function:</p>
+<head><link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/github.min.css">
+      </head>
+<code-chunk>
+  <div slot="code">
+    <div class="code-chunk">
+    <code class="code mac bash">
+      curl -o ~/your_plot_name.png http://localhost:5656/ocpu/tmp/{session_id}/graphics/{plot_number}/png </code>
+      <code class="code linux bash">
+        curl -o ~/your_plot_name.png http://localhost:5656/ocpu/tmp/{session_id}/graphics/{plot_number}/png<br>
+      </code>
+        <code class="code windows bash">
+<br>
+        </code>
+    <code class="code r active">
+      draw_plots(plot_number=NULL)<br>
+    </code>
+</div></div></code-chunk>
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+<link rel="stylesheet"
+            href="highlightjs/styles/default.css">
+<script src="js/highlight.pack.js"></script>
+  <script>
+    /*
+Applies highlighting to all <pre><code>..</code></pre> blocks on a page.
+*/
+hljs.configure({useBR: true});
+$("code-chunk code").each(function (i, e) {
+    hljs.highlightBlock(e);
+});
+/*hljs.initHighlightingOnLoad();*/
+  </script>
 
 </div>
 </div>

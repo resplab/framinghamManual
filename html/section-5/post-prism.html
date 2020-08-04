@@ -1,0 +1,45 @@
+<code-chunk>
+  <div slot="code">
+    <div class="code-chunk">
+      <code class="code mac bash">
+        curl -X POST -H "Content-Type: application/json" -d '{"api_key":["YOUR_API_KEY"],"func":["prism_model_run"],
+"model_input":[{}]}' http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json </code>
+        <code class="code linux bash">
+          curl -X POST -H "Content-Type: application/json" -d '{"api_key":["YOUR_API_KEY"],"func":["prism_model_run"],
+"model_input":[{}]}' http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json
+        </code>
+          <code class="code windows bash">
+            curl -Body '{"api_key":["YOUR_API_KEY"],"func":["prism_model_run"],"model_input":[{}]}' -Method POST -uri http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json -Headers @{"Content-type"="application/json"}
+          </code>
+            <code class="code js javascript">
+              let patient = JSON.stringify({
+                api_key: 'YOUR_API_KEY',
+                func: ["prism_model_run"],
+                model_input: [{}]
+              });
+              request.open('POST', 'http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json');
+              request.setRequestHeader('Content-Type', 'application/json');
+              request.send(patient);
+              let results = request.response;
+              </code>
+                <code class="code r hljs active">
+                  library(prism)
+                connect_to_model('framinghamPrism', api_key = YOUR_API_KEY)
+                results = model_run()
+                </code>
+                  <code class="code python">
+                  api_key = 'YOUR_API_KEY'
+                patientInput = [{
+                }]
+                response = requests.post("http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json",
+                                         json = {"api_key":[api_key],
+                                           "func": ["prism_model_run"],
+                                           "model_input": patientInput})
+                print(response)
+                results = json.loads(response.text)
+                print(results)
+                </code>
+                  </div>
+                  </div>
+                  </code-chunk>
+                  <br>

@@ -1,5 +1,11 @@
 
-# Using the Package in R {#packageinR}
+# Using the Package in R (Developers Only) {#packageinR}
+
+As this is a private package, this section is for developers only. If you would like to discuss development of the package, please contact either:
+
+Amin Adibi: amin.adibi@ubc.ca
+
+Mohsen Sadatsafavi: mohsen.sadatsafavi@ubc.ca
 
 ## Installation
 
@@ -16,6 +22,8 @@ install.packages('devtools')
 ```
 
 4. Install `framinghamPredictor` from GitHub:
+
+Note: This package has been set to private.
 
 ```{r, eval=FALSE, echo=TRUE}
 devtools::install_github('resplab/framinghamPredictor')
@@ -65,7 +73,18 @@ devtools::install_github("resplab/framinghamPredictor")
 
 Now that you have installed `framinghamPredictor`, you can load the library:
 
-```{r, eval = FALSE, echo = TRUE}
+```{r, eval = TRUE, echo = TRUE}
 library(framinghamPredictor)
 ```
 
+There should be the default input predictors which come preloaded:
+
+```{r, eval = TRUE, echo = TRUE}
+print(sample_predictors)
+```
+
+To run the model, you can use these `sample_predictors`, or adjust them yourself:
+
+```{r, eval = FALSE, echo = TRUE}
+make_predictions(resp_var="fev1", predictors=sample_predictors)
+```

@@ -5,16 +5,47 @@ PRISM (Programmable Interface for Simulation/Statistical Models) is a package wh
 
 For more information, the PRISM package can be found on GitHub at [PRISM on  GitHub](https://github.com/resplab/prism).
 
-## PRISM API in Excel {#api-in-excel}
+## API in R/Javascript/Python/Bash {#api-in-r}
 
-One of the primary goals of PRISM is making prediction models accessible to a wide range of audiences, including those with less programming experience. The Excel API is targetted towards users who are less familiar with programming, or users who are familiar with programming and would like an easy way to extract the data quickly.
+To get started, you will need to install a few packages:
 
-To use the model, you will need to have Excel installed on your computer. Currently, the Excel API only works in Windows (PC), although we are working on developing a version for Mac (OS X) as well.
+```{r, eval=TRUE, echo=FALSE}
+source("R/addHTML.R")
+addHTML("install.html", section = 5, codeChunk = TRUE)
+```
 
-### Downloading the Spreadsheet {-}
+The next step is to get an API key. For now, we will be giving out API keys on a case-by-case basis, so please email either:
 
-To get started, you will need to go to:
+Amin Adibi: amin.adibi@ubc.ca
 
-[PRISM Model Repository](http://resp.core.ubc.ca/ipress/prism).
+Mohsen Sadatsafavi: mohsen.sadatsafavi@ubc.ca
 
-In the row that has the **Framingham** model, go to the column labelled **Excel Interface** and click on the link **Framingham Excel (PC)**. This will download the Excel Interface for the **Framingham** model.
+### Setting the Input {-}
+
+To run the model, you can either use the default input, or set your own input. To see what the default input is, you can use the following `POST` call:
+
+```{r, eval=TRUE, echo=FALSE}
+addHTML("get-default-input.html", section = 5, codeChunk = TRUE)
+```
+
+### Running the Model {-}
+
+To run the model with the default input, you can use the following `POST` call:
+
+```{r, eval=TRUE, echo=FALSE}
+addHTML("post-prism.html", section = 5, codeChunk = TRUE)
+```
+
+Now, the input for the `framinghamPredictor` package is quite large, so we won't print all the input options here. You may change as many of the default inputs as you like. I have highlighted below a few of the more common input parameters you might want to adjust:
+
+```{r, eval=TRUE, echo=FALSE}
+addHTML("post-prism2.html", section = 5, codeChunk = TRUE)
+```
+
+### Plots
+
+When you call `model_run`, some plots are created from the data. To view these plots in `R`, you will need to use the `draw_plots` function. To download the plots via command line, you will need to use the `session_id`, which is returned by the `prism_model_run` function along with the data results. 
+
+```{r, eval=TRUE, echo=FALSE}
+addHTML("get-prism-plots.html", section = 5, codeChunk = TRUE)
+```

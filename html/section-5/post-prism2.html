@@ -1,0 +1,193 @@
+<code-chunk>
+  <div slot="code">
+    <div class="code-chunk">
+    <code class="code mac">
+      curl -X POST -H "Content-Type: application/json" -d '{
+        "api_key":["YOUR_API_KEY"],
+        "func":["prism_model_run"],
+        "model_input":[{
+              "predictors":{
+                "fev1_0": 1.0,
+                "fvc_0": 1.0,
+                "age": 75,
+                "triglycerides": null,
+                "hematocrit": null,
+                "albumin": null,
+                "globulin": null,
+                "ALP": null,
+                "WBC": null,
+                "QRS_intv": null,
+                "wine": null,
+                "beer": null,
+                "cocktail": null,
+                "height": 170,
+                "smoke_year": null,
+                "daily_cigs": null,
+                "sex": "male",
+                "broncho": "",
+                "dyspnea_exc": "",
+                "night_sym": ""
+              },
+              "resp_var": "fev1"    }
+              ]}' http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json </code>
+      <code class="code linux">
+      curl -X POST -H "Content-Type: application/json" -d '{
+        "api_key":["YOUR_API_KEY"],
+        "func":["prism_model_run"],
+        "model_input":[
+        {
+              "predictors":{
+                "fev1_0": 1.0,
+                "fvc_0": 1.0,
+                "age": 75,
+                "triglycerides": null,
+                "hematocrit": null,
+                "albumin": null,
+                "globulin": null,
+                "ALP": null,
+                "WBC": null,
+                "QRS_intv": null,
+                "wine": null,
+                "beer": null,
+                "cocktail": null,
+                "height": 170,
+                "smoke_year": null,
+                "daily_cigs": null,
+                "sex": "male",
+                "broncho": "",
+                "dyspnea_exc": "",
+                "night_sym": ""
+              },
+              "resp_var": "fev1"    }
+        ]}' http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json
+      </code>
+        <code class="code windows">
+          curl -Body '{
+            "api_key":["YOUR_API_KEY"],
+            "func":["prism_model_run"],
+            "model_input":[{
+              "predictors":{
+                "fev1_0": 1.0,
+                "fvc_0": 1.0,
+                "age": 75,
+                "triglycerides": null,
+                "hematocrit": null,
+                "albumin": null,
+                "globulin": null,
+                "ALP": null,
+                "WBC": null,
+                "QRS_intv": null,
+                "wine": null,
+                "beer": null,
+                "cocktail": null,
+                "height": 170,
+                "smoke_year": null,
+                "daily_cigs": null,
+                "sex": "male",
+                "broncho": "",
+                "dyspnea_exc": "",
+                "night_sym": ""
+              },
+              "resp_var": "fev1"    }]}' -Method POST -uri http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json -Headers @{"Content-type"="application/json"}
+        </code>
+    <code class="code js">
+      let patient = JSON.stringify({
+  api_key: 'YOUR_API_KEY',
+  func: ["prism_model_run"],
+  model_input: [
+    {
+              "predictors":{
+                "fev1_0": 1.0,
+                "fvc_0": 1.0,
+                "age": 75,
+                "triglycerides": null,
+                "hematocrit": null,
+                "albumin": null,
+                "globulin": null,
+                "ALP": null,
+                "WBC": null,
+                "QRS_intv": null,
+                "wine": null,
+                "beer": null,
+                "cocktail": null,
+                "height": 170,
+                "smoke_year": null,
+                "daily_cigs": null,
+                "sex": "male",
+                "broncho": "",
+                "dyspnea_exc": "",
+                "night_sym": ""
+              },
+              "resp_var": "fev1"
+            }
+  ]
+});
+request.open('POST', 'http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json');
+request.setRequestHeader('Content-Type', 'application/json');
+request.send(patient);
+let results = request.response;
+    </code>
+    <code class="code r active">
+      library(peermodels)
+      connect_to_model('framinghamPrism', api_key = YOUR_API_KEY)
+      input = list(
+      resp_var="fev1",
+      predictors = list(fev1_0 = 1.0,
+      fvc_0 = 1.0,
+      age=75,
+      triglycerides = NA,
+      hematocrit = NA,
+      albumin=NA,
+      globulin=NA,
+      ALP=NA,
+      WBC=NA,
+      QRS_intv=NA,
+      wine=NA,
+      beer=NA,
+      cocktail=NA,
+      height=170,
+      smoke_year=NA,
+      daily_cigs=NA,
+      sex="male",
+      broncho="",
+      dyspnea_exc="",
+      night_sym=""))
+      results = model_run(input)
+    </code>
+    <code class="code python">
+      api_key = 'YOUR_API_KEY'
+      patientInput = [{
+              "predictors":{
+                "fev1_0": 1.0,
+                "fvc_0": 1.0,
+                "age": 75,
+                "triglycerides": null,
+                "hematocrit": null,
+                "albumin": null,
+                "globulin": null,
+                "ALP": null,
+                "WBC": null,
+                "QRS_intv": null,
+                "wine": null,
+                "beer": null,
+                "cocktail": null,
+                "height": 170,
+                "smoke_year": null,
+                "daily_cigs": null,
+                "sex": "male",
+                "broncho": "",
+                "dyspnea_exc": "",
+                "night_sym": ""
+              },
+              "resp_var": "fev1"    }]
+      response = requests.post("http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json",
+      json = {"api_key":[api_key],
+      "func": ["prism_model_run"],
+      "model_input": patientInput})
+print(response)
+results = json.loads(response.text)
+print(results)
+    </code>
+</div>
+</div>
+</code-chunk>

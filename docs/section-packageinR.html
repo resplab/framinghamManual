@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Using the Package in R | Framingham FEV1 Predictor</title>
-  <meta name="description" content="3 Using the Package in R | Framingham FEV1 Predictor" />
+  <title>3 Using the Package in R (Developers Only) | Framingham FEV1 Predictor</title>
+  <meta name="description" content="3 Using the Package in R (Developers Only) | Framingham FEV1 Predictor" />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Using the Package in R | Framingham FEV1 Predictor" />
+  <meta property="og:title" content="3 Using the Package in R (Developers Only) | Framingham FEV1 Predictor" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Using the Package in R | Framingham FEV1 Predictor" />
+  <meta name="twitter:title" content="3 Using the Package in R (Developers Only) | Framingham FEV1 Predictor" />
   
   
   
@@ -31,6 +31,7 @@
   
 <link rel="prev" href="section-thestudy.html"/>
 <link rel="next" href="section-webapp.html"/>
+<script src="book_assets/header-attrs-2.1/header-attrs.js"></script>
 <script src="book_assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,25 +51,26 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -77,9 +79,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -131,8 +133,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="section-introduction.html"><a href="section-introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="section-thestudy.html"><a href="section-thestudy.html"><i class="fa fa-check"></i><b>2</b> The Study</a></li>
-<li class="chapter" data-level="3" data-path="section-packageinR.html"><a href="section-packageinR.html"><i class="fa fa-check"></i><b>3</b> Using the Package in R</a><ul>
-<li class="chapter" data-level="3.1" data-path="section-packageinR.html"><a href="section-packageinR.html#section-installation"><i class="fa fa-check"></i><b>3.1</b> Installation</a><ul>
+<li class="chapter" data-level="3" data-path="section-packageinR.html"><a href="section-packageinR.html"><i class="fa fa-check"></i><b>3</b> Using the Package in R (Developers Only)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="section-packageinR.html"><a href="section-packageinR.html#section-installation"><i class="fa fa-check"></i><b>3.1</b> Installation</a>
+<ul>
 <li class="chapter" data-level="" data-path="section-packageinR.html"><a href="section-packageinR.html#section-windows-7-or-later"><i class="fa fa-check"></i>Windows 7 or Later</a></li>
 <li class="chapter" data-level="" data-path="section-packageinR.html"><a href="section-packageinR.html#section-mac-os-sierra-and-later"><i class="fa fa-check"></i>Mac OS Sierra and Later</a></li>
 <li class="chapter" data-level="" data-path="section-packageinR.html"><a href="section-packageinR.html#section-ubuntu-16.04-and-later"><i class="fa fa-check"></i>Ubuntu 16.04 and Later</a></li>
@@ -140,12 +144,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2" data-path="section-packageinR.html"><a href="section-packageinR.html#section-running-the-model"><i class="fa fa-check"></i><b>3.2</b> Running the Model</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="section-webapp.html"><a href="section-webapp.html"><i class="fa fa-check"></i><b>4</b> Using the Web Application</a></li>
-<li class="chapter" data-level="5" data-path="section-using-the-package-as-an-api-prism.html"><a href="section-using-the-package-as-an-api-prism.html"><i class="fa fa-check"></i><b>5</b> Using the Package as an API (PRISM)</a><ul>
-<li class="chapter" data-level="5.1" data-path="section-using-the-package-as-an-api-prism.html"><a href="section-using-the-package-as-an-api-prism.html#section-api-in-excel"><i class="fa fa-check"></i><b>5.1</b> PRISM API in Excel</a><ul>
-<li class="chapter" data-level="" data-path="section-using-the-package-as-an-api-prism.html"><a href="section-using-the-package-as-an-api-prism.html#section-downloading-the-spreadsheet"><i class="fa fa-check"></i>Downloading the Spreadsheet</a></li>
+<li class="chapter" data-level="5" data-path="section-using-the-package-as-an-api-prism.html"><a href="section-using-the-package-as-an-api-prism.html"><i class="fa fa-check"></i><b>5</b> Using the Package as an API (PRISM)</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="section-using-the-package-as-an-api-prism.html"><a href="section-using-the-package-as-an-api-prism.html#section-api-in-r"><i class="fa fa-check"></i><b>5.1</b> API in R/Javascript/Python/Bash</a>
+<ul>
+<li class="chapter" data-level="" data-path="section-using-the-package-as-an-api-prism.html"><a href="section-using-the-package-as-an-api-prism.html#section-setting-the-input"><i class="fa fa-check"></i>Setting the Input</a></li>
+<li class="chapter" data-level="" data-path="section-using-the-package-as-an-api-prism.html"><a href="section-using-the-package-as-an-api-prism.html#section-running-the-model-1"><i class="fa fa-check"></i>Running the Model</a></li>
+<li class="chapter" data-level="5.1.1" data-path="section-using-the-package-as-an-api-prism.html"><a href="section-using-the-package-as-an-api-prism.html#section-plots"><i class="fa fa-check"></i><b>5.1.1</b> Plots</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="section-appendix1.html"><a href="section-appendix1.html"><i class="fa fa-check"></i><b>6</b> Appendix 1: Installing R</a><ul>
+<li class="chapter" data-level="6" data-path="section-appendix1.html"><a href="section-appendix1.html"><i class="fa fa-check"></i><b>6</b> Appendix 1: Installing R</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="section-appendix1.html"><a href="section-appendix1.html#section-step-1-mirrors"><i class="fa fa-check"></i><b>6.1</b> Step 1: Mirrors</a></li>
 <li class="chapter" data-level="6.2" data-path="section-appendix1.html"><a href="section-appendix1.html#section-mac-os-x"><i class="fa fa-check"></i><b>6.2</b> Mac OS X</a></li>
 <li class="chapter" data-level="6.3" data-path="section-appendix1.html"><a href="section-appendix1.html#section-windows"><i class="fa fa-check"></i><b>6.3</b> Windows</a></li>
@@ -168,57 +177,69 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="section-packageinR" class="section level1">
-<h1><span class="header-section-number">3</span> Using the Package in R</h1>
-<div id="section-installation" class="section level2">
+<div id="section-packageinR" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Using the Package in R (Developers Only)</h1>
+<p>As this is a private package, this section is for developers only. If you would like to discuss development of the package, please contact either:</p>
+<p>Amin Adibi: <a href="mailto:amin.adibi@ubc.ca" class="email">amin.adibi@ubc.ca</a></p>
+<p>Mohsen Sadatsafavi: <a href="mailto:mohsen.sadatsafavi@ubc.ca" class="email">mohsen.sadatsafavi@ubc.ca</a></p>
+<div id="section-installation" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Installation</h2>
 <p>If you do not have R installed on your computer, please go to <a href="section-appendix1.html#section-appendix1">Appendix 1</a>. Once you have R installed, you can install the <strong>framinghamPredictor</strong> package as per the instructions below:</p>
-<div id="section-windows-7-or-later" class="section level3 unnumbered">
+<div id="section-windows-7-or-later" class="section level3 unnumbered" number="">
 <h3>Windows 7 or Later</h3>
 <ol style="list-style-type: decimal">
-<li>Download and Install the latest version of R from <a href="https://cran.r-project.org/bin/windows/base/">https://cran.r-project.org/bin/windows/base/</a></li>
+<li><p>Download and Install the latest version of R from <a href="https://cran.r-project.org/bin/windows/base/">https://cran.r-project.org/bin/windows/base/</a></p></li>
 <li><p>Download and Install R Studio from <a href="https://www.rstudio.com/products/rstudio/download/">https://www.rstudio.com/products/rstudio/download/</a></p></li>
 <li><p>Using either an R session in Terminal or in R Studio, install the package <code>devtools</code>:</p></li>
 </ol>
-<div class="sourceCode" id="section-cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&#39;devtools&#39;</span>)</a></code></pre></div>
+<div class="sourceCode" id="section-cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="section-cb1-1"><a href="section-packageinR.html#section-cb1-1"></a><span class="kw">install.packages</span>(<span class="st">&#39;devtools&#39;</span>)</span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>Install <code>framinghamPredictor</code> from GitHub:</li>
 </ol>
-<div class="sourceCode" id="section-cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&#39;resplab/framinghamPredictor&#39;</span>)</a></code></pre></div>
+<p>Note: This package has been set to private.</p>
+<div class="sourceCode" id="section-cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="section-cb2-1"><a href="section-packageinR.html#section-cb2-1"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&#39;resplab/framinghamPredictor&#39;</span>)</span></code></pre></div>
 </div>
-<div id="section-mac-os-sierra-and-later" class="section level3 unnumbered">
+<div id="section-mac-os-sierra-and-later" class="section level3 unnumbered" number="">
 <h3>Mac OS Sierra and Later</h3>
 <ol style="list-style-type: decimal">
-<li>Download and Install the latest version of R from <a href="https://cran.r-project.org/bin/macosx/">https://cran.r-project.org/bin/macosx/</a></li>
+<li><p>Download and Install the latest version of R from <a href="https://cran.r-project.org/bin/macosx/">https://cran.r-project.org/bin/macosx/</a></p></li>
 <li><p>Download and Install R Studio from <a href="https://www.rstudio.com/products/rstudio/download/">https://www.rstudio.com/products/rstudio/download/</a></p></li>
 <li><p>Using either an R session in Terminal or in R Studio, install the package <code>devtools</code>:</p></li>
 </ol>
-<div class="sourceCode" id="section-cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&#39;devtools&#39;</span>)</a></code></pre></div>
+<div class="sourceCode" id="section-cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="section-cb3-1"><a href="section-packageinR.html#section-cb3-1"></a><span class="kw">install.packages</span>(<span class="st">&#39;devtools&#39;</span>)</span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>Install epicR from GitHub:</li>
 </ol>
-<div class="sourceCode" id="section-cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&#39;resplab/epicR&#39;</span>)</a></code></pre></div>
+<div class="sourceCode" id="section-cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="section-cb4-1"><a href="section-packageinR.html#section-cb4-1"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&#39;resplab/epicR&#39;</span>)</span></code></pre></div>
 </div>
-<div id="section-ubuntu-16.04-and-later" class="section level3 unnumbered">
+<div id="section-ubuntu-16.04-and-later" class="section level3 unnumbered" number="">
 <h3>Ubuntu 16.04 and Later</h3>
 <ol style="list-style-type: decimal">
 <li><p>Install R if you don’t have it installed already. See <a href="section-appendix1.html#section-appendix1">Appendix 1</a> for installation guide.</p></li>
 <li><p>Download and Install R Studio from <a href="https://www.rstudio.com/products/rstudio/download/">https://www.rstudio.com/products/rstudio/download/</a></p></li>
 <li><p>Using either an R session in Terminal or in R Studio, install the package <code>devtools</code>:</p></li>
 </ol>
-<div class="sourceCode" id="section-cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">install.packages</span> (<span class="st">&#39;devtools&#39;</span>)</a></code></pre></div>
+<div class="sourceCode" id="section-cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="section-cb5-1"><a href="section-packageinR.html#section-cb5-1"></a><span class="kw">install.packages</span> (<span class="st">&#39;devtools&#39;</span>)</span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>Install <code>framinghamPredictor</code> from GitHub:</li>
 </ol>
-<div class="sourceCode" id="section-cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&#39;resplab/framinghamPredictor&#39;</span>)</a></code></pre></div>
-<div class="sourceCode" id="section-cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</a>
-<a class="sourceLine" id="cb7-2" data-line-number="2">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;resplab/framinghamPredictor&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="section-cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="section-cb6-1"><a href="section-packageinR.html#section-cb6-1"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&#39;resplab/framinghamPredictor&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="section-cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="section-cb7-1"><a href="section-packageinR.html#section-cb7-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</span>
+<span id="section-cb7-2"><a href="section-packageinR.html#section-cb7-2"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;resplab/framinghamPredictor&quot;</span>)</span></code></pre></div>
 </div>
 </div>
-<div id="section-running-the-model" class="section level2">
+<div id="section-running-the-model" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Running the Model</h2>
 <p>Now that you have installed <code>framinghamPredictor</code>, you can load the library:</p>
-<div class="sourceCode" id="section-cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">library</span>(framinghamPredictor)</a></code></pre></div>
+<div class="sourceCode" id="section-cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="section-cb8-1"><a href="section-packageinR.html#section-cb8-1"></a><span class="kw">library</span>(framinghamPredictor)</span></code></pre></div>
+<p>There should be the default input predictors which come preloaded:</p>
+<div class="sourceCode" id="section-cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="section-cb9-1"><a href="section-packageinR.html#section-cb9-1"></a><span class="kw">print</span>(sample_predictors)</span>
+<span id="section-cb9-2"><a href="section-packageinR.html#section-cb9-2"></a><span class="op">&gt;</span><span class="st">   </span>fev1_<span class="dv">0</span> fvc_<span class="dv">0</span> age triglycerides hematocrit albumin globulin ALP WBC QRS_intv wine beer cocktail height smoke_year</span>
+<span id="section-cb9-3"><a href="section-packageinR.html#section-cb9-3"></a><span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>      <span class="dv">1</span>     <span class="dv">1</span>  <span class="dv">50</span>            <span class="ot">NA</span>         <span class="ot">NA</span>      <span class="ot">NA</span>       <span class="ot">NA</span>  <span class="ot">NA</span>  <span class="ot">NA</span>       <span class="ot">NA</span>   <span class="ot">NA</span>   <span class="ot">NA</span>       <span class="ot">NA</span>    <span class="dv">180</span>         <span class="dv">20</span></span>
+<span id="section-cb9-4"><a href="section-packageinR.html#section-cb9-4"></a><span class="op">&gt;</span><span class="st">   </span>daily_cigs    sex broncho dyspnea_exc night_sym</span>
+<span id="section-cb9-5"><a href="section-packageinR.html#section-cb9-5"></a><span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>          <span class="dv">4</span> female</span></code></pre></div>
+<p>To run the model, you can use these <code>sample_predictors</code>, or adjust them yourself:</p>
+<div class="sourceCode" id="section-cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="section-cb10-1"><a href="section-packageinR.html#section-cb10-1"></a><span class="kw">make_predictions</span>(<span class="dt">resp_var=</span><span class="st">&quot;fev1&quot;</span>, <span class="dt">predictors=</span>sample_predictors)</span></code></pre></div>
 
 </div>
 </div>

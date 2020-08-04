@@ -50,6 +50,4 @@ themeColors = c("#330033", "#8cf2f2", "#c51672", "#007bff")
 ```
 # Introduction {#introduction}
 
-TODO: Write Introduction
-
 It might be helpful to take a look at the Framingham FEV1 web application before reading further, as this gives a visualization of the package: [Framingham FEV1 Predictor](#webapp).
