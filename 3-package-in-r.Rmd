@@ -42,7 +42,7 @@ install.packages('devtools')
 4. Install epicR from GitHub:
 
 ```{r, eval=FALSE, echo=TRUE}
-devtools::install_github('resplab/epicR')
+devtools::install_github('resplab/framinghamPredictor')
 ```
 
 
@@ -87,4 +87,11 @@ To run the model, you can use these `sample_predictors`, or adjust them yourself
 
 ```{r, eval = FALSE, echo = TRUE}
 make_predictions(resp_var="fev1", predictors=sample_predictors)
+```
+
+Here are the details for the `sample_predictors` arguments:
+
+```{r, eval = TRUE, echo=FALSE}
+source("R/addHTML.R")
+addHTML("sample_predictors-itemize.html", section = 3, codeChunk = FALSE)
 ```

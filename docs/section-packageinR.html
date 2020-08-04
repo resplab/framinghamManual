@@ -210,7 +210,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="4" style="list-style-type: decimal">
 <li>Install epicR from GitHub:</li>
 </ol>
-<div class="sourceCode" id="section-cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="section-cb4-1"><a href="section-packageinR.html#section-cb4-1"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&#39;resplab/epicR&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="section-cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="section-cb4-1"><a href="section-packageinR.html#section-cb4-1"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&#39;resplab/framinghamPredictor&#39;</span>)</span></code></pre></div>
 </div>
 <div id="section-ubuntu-16.04-and-later" class="section level3 unnumbered" number="">
 <h3>Ubuntu 16.04 and Later</h3>
@@ -240,6 +240,69 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="section-cb9-5"><a href="section-packageinR.html#section-cb9-5"></a><span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>          <span class="dv">4</span> female</span></code></pre></div>
 <p>To run the model, you can use these <code>sample_predictors</code>, or adjust them yourself:</p>
 <div class="sourceCode" id="section-cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="section-cb10-1"><a href="section-packageinR.html#section-cb10-1"></a><span class="kw">make_predictions</span>(<span class="dt">resp_var=</span><span class="st">&quot;fev1&quot;</span>, <span class="dt">predictors=</span>sample_predictors)</span></code></pre></div>
+<p>Here are the details for the <code>sample_predictors</code> arguments:</p>
+<head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/list-group.js"></script>
+    </head>
+<br><div class="row">
+<div class="col-4">
+    <div class="list-group left" id="list-tab" role="tablist">
+<a class="list-group-item list-group-item-action active" id="list--sample_predictors-list" data-toggle="list" href="#list--sample_predictors" role="tab" aria-controls="-sample_predictors">fev1_0</a>
+<a class="list-group-item list-group-item-action" id="list-fvc_0-sample_predictors-list" data-toggle="list" href="#list-fvc_0-sample_predictors" role="tab" aria-controls="fvc_0-sample_predictors">fvc_0</a>
+<a class="list-group-item list-group-item-action" id="list-age-sample_predictors-list" data-toggle="list" href="#list-age-sample_predictors" role="tab" aria-controls="age-sample_predictors">age</a>
+<a class="list-group-item list-group-item-action" id="list-triglycerides-sample_predictors-list" data-toggle="list" href="#list--sample_predictors" role="tab" aria-controls="triglycerides-sample_predictors">triglycerides</a>
+<a class="list-group-item list-group-item-action" id="list-hematocrit-sample_predictors-list" data-toggle="list" href="#list-hematocrit-sample_predictors" role="tab" aria-controls="hematocrit-sample_predictors">hematocrit</a>
+<a class="list-group-item list-group-item-action" id="list-albumin-sample_predictors-list" data-toggle="list" href="#list-albumin-sample_predictors" role="tab" aria-controls="albumin-sample_predictors">albumin</a>
+<a class="list-group-item list-group-item-action" id="list-globulin-sample_predictors-list" data-toggle="list" href="#list-globulin-sample_predictors" role="tab" aria-controls="globulin-sample_predictors">globulin</a>
+<a class="list-group-item list-group-item-action" id="list-ALP-sample_predictors-list" data-toggle="list" href="#list-ALP-sample_predictors" role="tab" aria-controls="ALP-sample_predictors">ALP</a>
+<a class="list-group-item list-group-item-action" id="list-WBC-sample_predictors-list" data-toggle="list" href="#list-WBC-sample_predictors" role="tab" aria-controls="WBC-sample_predictors">WBC</a>
+<a class="list-group-item list-group-item-action" id="list-QRS_intv-sample_predictors-list" data-toggle="list" href="#list-QRS_intv-sample_predictors" role="tab" aria-controls="QRS_intv-sample_predictors">QRS_intv</a>
+<a class="list-group-item list-group-item-action" id="list-wine-sample_predictors-list" data-toggle="list" href="#list-wine-sample_predictors" role="tab" aria-controls="wine-sample_predictors">wine</a>
+<a class="list-group-item list-group-item-action" id="list-cocktail-sample_predictors-list" data-toggle="list" href="#list-cocktail-sample_predictors" role="tab" aria-controls="cocktail-sample_predictors">cocktail</a>
+</div>
+  </div>
+<div class="col-4">
+    <div class="list-group right" id="list-tab" role="tablist">
+<a class="list-group-item list-group-item-action active" id="list-beer-sample_predictors-list" data-toggle="list" href="#list-beer-sample_predictors" role="tab" aria-controls="beer-sample_predictors">beer</a>
+<a class="list-group-item list-group-item-action" id="list-height-sample_predictors-list" data-toggle="list" href="#list-height-sample_predictors" role="tab" aria-controls="height-sample_predictors">height</a>
+<a class="list-group-item list-group-item-action" id="list-smoke_year-sample_predictors-list" data-toggle="list" href="#list-smoke_year-sample_predictors" role="tab" aria-controls="smoke_year-sample_predictors">smoke_year</a>
+<a class="list-group-item list-group-item-action" id="list-daily_cigs-sample_predictors-list" data-toggle="list" href="#list-daily_cigs-sample_predictors" role="tab" aria-controls="daily_cigs-sample_predictors">daily_cigs</a>
+<a class="list-group-item list-group-item-action" id="list-sex-sample_predictors-list" data-toggle="list" href="#list-sex-sample_predictors" role="tab" aria-controls="sex-sample_predictors">sex</a>
+<a class="list-group-item list-group-item-action" id="list-broncho-sample_predictors-list" data-toggle="list" href="#list-broncho-sample_predictors" role="tab" aria-controls="broncho-sample_predictors">broncho</a>
+<a class="list-group-item list-group-item-action" id="list-dyspnea_exc-sample_predictors-list" data-toggle="list" href="#list-dyspnea_exc-sample_predictors" role="tab" aria-controls="dyspnea_exc-sample_predictors">dyspnea_exc</a>
+<a class="list-group-item list-group-item-action" id="list-night_symp-sample_predictors-list" data-toggle="list" href="#list-night_symp-sample_predictors" role="tab" aria-controls="night_symp-sample_predictors">night_symp</a>
+</div>
+  </div>
+<div class="col-4">
+    <div class="tab-content" id="nav-tabContent">
+<div class="tab-pane fade show active" id="list--sample_predictors" role="tabpanel" aria-labelledby="list--sample_predictors-list">(float) (REQUIRED) forced expiratory volume in 1 second in L (0--5)</div>
+<div class="tab-pane fade" id="list-fvc_0-sample_predictors" role="tabpanel" aria-labelledby="list--sample_predictors-list">(float) (REQUIRED) force vital capacity, the amount of air that can be forcibly
+blown out in one exhale (L)</div>
+<div class="tab-pane fade" id="list-age-sample_predictors" role="tabpanel" aria-labelledby="list-age-sample_predictors-list">(float) (REQUIRED) the age of the patient (20--100)</div>
+<div class="tab-pane fade" id="list-triglycerides-sample_predictors" role="tabpanel" aria-labelledby="list-triglycerides-sample_predictors-list">(float or NA) blood triglyceride levels (mg/dL)</div>
+<div class="tab-pane fade" id="list-hematocrit-sample_predictors" role="tabpanel" aria-labelledby="list-hematocrit-sample_predictors-list">(float or NA) blood hematocrit percentage</div>
+<div class="tab-pane fade" id="list-albumin-sample_predictors" role="tabpanel" aria-labelledby="list-albumin-sample_predictors-list">(float or NA) blood albumin (g/L)</div>
+<div class="tab-pane fade" id="list-globulin-sample_predictors" role="tabpanel" aria-labelledby="list-globulin-sample_predictors-list">(float or NA) blood globulin (g/L)</div>
+<div class="tab-pane fade" id="list-ALP-sample_predictors" role="tabpanel" aria-labelledby="list-ALP-sample_predictors-list">(float or NA) blood alkaline phosphotase (IU/L)</div>
+<div class="tab-pane fade" id="list-WBC-sample_predictors" role="tabpanel" aria-labelledby="list-WBC-sample_predictors-list">(float or NA) white blood cells (10^9/L)</div>
+<div class="tab-pane fade" id="list-QRS_intv-sample_predictors" role="tabpanel" aria-labelledby="list-QRS_intv-sample_predictors-list">(float or NA) TODO</div>
+<div class="tab-pane fade" id="list-wine-sample_predictors" role="tabpanel" aria-labelledby="list-wine-sample_predictors-list">(float or NA) number of glasses of wine consumed per week</div>
+<div class="tab-pane fade" id="list-cocktail-sample_predictors" role="tabpanel" aria-labelledby="list-cocktail-sample_predictors-list">(float or NA) number of cocktail/licquor/spirits consumed per week</div>
+<div class="tab-pane fade" id="list-beer-sample_predictors" role="tabpanel" aria-labelledby="list-beer-sample_predictors-list">(float or NA) number of beers (cans/bottles) consumed per week</div>
+<div class="tab-pane fade" id="list-height-sample_predictors" role="tabpanel" aria-labelledby="list-height-sample_predictors-list">(float or NA) (REQUIRED) patient height in centimetres (100--250)</div>
+<div class="tab-pane fade" id="list-smoke_year-sample_predictors" role="tabpanel" aria-labelledby="list-smoke_year-sample_predictors-list">(float or NA) number of years the patient has been smoking for</div>
+<div class="tab-pane fade" id="list-daily_cigs-sample_predictors" role="tabpanel" aria-labelledby="list-daily_cigs-sample_predictors-list">(float or NA) number of cigarettes the patient smokes per day</div>
+<div class="tab-pane fade" id="list-sex-sample_predictors" role="tabpanel" aria-labelledby="list-sex-sample_predictors-list">(str) (REQUIRED) sex of patient, one of 'male', 'female'</div>
+<div class="tab-pane fade" id="list-broncho-sample_predictors" role="tabpanel" aria-labelledby="list-broncho-sample_predictors-list">(str) TODO</div>
+<div class="tab-pane fade" id="list-dyspnea-sample_predictors" role="tabpanel" aria-labelledby="list-dyspnea-sample_predictors-list">(str) TODO</div>
+<div class="tab-pane fade" id="list-night_symp-sample_predictors" role="tabpanel" aria-labelledby="list-night_symp-sample_predictors-list">(str) TODO</div>
+</div>
+    </div>
+  </div>
+<br>
 
 </div>
 </div>
