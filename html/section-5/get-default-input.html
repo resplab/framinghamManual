@@ -5,12 +5,19 @@
   <div slot="code">
     <div class="code-chunk">
     <code class="code mac bash">
-      curl -X POST -H "Content-Type: application/json" -d '{"api_key":["YOUR_API_KEY"],"func":["get_default_input"]}'
-      http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json </code>
+      curl \
+    -X POST \
+    -H "x-prism-auth-user: YOUR_API_KEY" \
+    -H "Content-Type: application/json" \
+    -d '{"func":["get_default_input"]}' \
+    https://prism.peermodelsnetwork.com/route/framinghamfev1predictor/run</code>
       <code class="code linux bash">
-        curl -X POST -H "Content-Type: application/json" -d '{"api_key":["YOUR_API_KEY"],"func":["get_default_input"]}'
-        http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json
-      </code>
+      curl \
+    -X POST \
+    -H "x-prism-auth-user: YOUR_API_KEY" \
+    -H "Content-Type: application/json" \
+    -d '{"func":["get_default_input"]}' \
+    https://prism.peermodelsnetwork.com/route/framinghamfev1predictor/run</code>
         <code class="code windows bash">
 
         </code>

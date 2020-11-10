@@ -230,12 +230,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <div slot="code">
     <div class="code-chunk">
     <code class="code mac bash">
-      curl -X POST -H "Content-Type: application/json" -d '{"api_key":["YOUR_API_KEY"],"func":["get_default_input"]}'<br>
-      http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json </code>
+      curl \<br>
+    -X POST \<br>
+    -H "x-prism-auth-user: YOUR_API_KEY" \<br>
+    -H "Content-Type: application/json" \<br>
+    -d '{"func":["get_default_input"]}' \<br>
+    https://prism.peermodelsnetwork.com/route/framinghamfev1predictor/run</code>
       <code class="code linux bash">
-        curl -X POST -H "Content-Type: application/json" -d '{"api_key":["YOUR_API_KEY"],"func":["get_default_input"]}'<br>
-        http://prism.resp.core.ubc.ca/ocpu/library/framinghamPrism/R/gateway/json<br>
-      </code>
+      curl \<br>
+    -X POST \<br>
+    -H "x-prism-auth-user: YOUR_API_KEY" \<br>
+    -H "Content-Type: application/json" \<br>
+    -d '{"func":["get_default_input"]}' \<br>
+    https://prism.peermodelsnetwork.com/route/framinghamfev1predictor/run</code>
         <code class="code windows bash">
 <br>
         </code>

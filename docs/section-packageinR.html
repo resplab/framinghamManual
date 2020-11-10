@@ -231,7 +231,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="section-running-the-model" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Running the Model</h2>
 <p>Now that you have installed <code>framinghamPredictor</code>, you can load the library:</p>
-<div class="sourceCode" id="section-cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="section-cb8-1"><a href="section-packageinR.html#section-cb8-1"></a><span class="kw">library</span>(framinghamPredictor)</span></code></pre></div>
+<div class="sourceCode" id="section-cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="section-cb8-1"><a href="section-packageinR.html#section-cb8-1"></a><span class="kw">library</span>(framinghamPredictor)</span>
+<span id="section-cb8-2"><a href="section-packageinR.html#section-cb8-2"></a><span class="op">&gt;</span><span class="st"> </span>Warning<span class="op">:</span><span class="st"> </span>replacing previous import <span class="st">&#39;lme4::lmer&#39;</span> by <span class="st">&#39;lmerTest::lmer&#39;</span> when loading <span class="st">&#39;framinghamPredictor&#39;</span></span></code></pre></div>
 <p>There should be the default input predictors which come preloaded:</p>
 <div class="sourceCode" id="section-cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="section-cb9-1"><a href="section-packageinR.html#section-cb9-1"></a><span class="kw">print</span>(sample_predictors)</span>
 <span id="section-cb9-2"><a href="section-packageinR.html#section-cb9-2"></a><span class="op">&gt;</span><span class="st">   </span>fev1_<span class="dv">0</span> fvc_<span class="dv">0</span> age triglycerides hematocrit albumin globulin ALP WBC QRS_intv wine beer cocktail height smoke_year</span>
